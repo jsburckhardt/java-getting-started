@@ -1,0 +1,29 @@
+{
+    "name": "Java DevContainer",
+    "image": "mcr.microsoft.com/devcontainers/java:0-17",
+    "settings": {
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.format.settings.url": ".vscode/java-formatter.xml",
+        "java.format.settings.profile": "GoogleStyle"
+    },
+    "mounts": [
+        "source=${env:HOME}${env:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+    ],
+    "forwardPorts": [
+        8080
+    ],
+    "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-test",
+        "GitHub.copilot"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "17"
+        },
+        "ghcr.io/jsburckhardt/devcontainer-features/gic:1": {}
+    },
+    "postCreateCommand": "./.devcontainer/install-maven.sh"
+}
