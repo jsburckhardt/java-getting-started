@@ -1,2 +1,1 @@
-# java-getting-started
-A repository for getting started with Java
+This repository is empty. Any task executed on it should be considered a new capability and needs to be created.
