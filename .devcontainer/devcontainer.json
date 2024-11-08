@@ -23,7 +23,10 @@
         "ghcr.io/devcontainers/features/java:1": {
             "version": "17"
         },
-        "ghcr.io/jsburckhardt/devcontainer-features/gic:1": {}
+        "ghcr.io/jsburckhardt/devcontainer-features/gic:1": {},
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+        "ghcr.io/devcontainers/features/azure-cli:1": {},
+        "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
     },
-    "postCreateCommand": "./.devcontainer/install-maven.sh"
+    "postCreateCommand": "bash ./.devcontainer/install-maven.sh"
 }

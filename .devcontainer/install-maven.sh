@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Install Maven
-MAVEN_VERSION=3.8.4
+MAVEN_VERSION=3.9.9
 MAVEN_DIR=apache-maven-$MAVEN_VERSION
 MAVEN_TAR=$MAVEN_DIR-bin.tar.gz
-MAVEN_URL=https://downloads.apache.org/maven/maven-3/$MAVEN_VERSION/binaries/$MAVEN_TAR
+MAVEN_URL=https://dlcdn.apache.org/maven/maven-3/$MAVEN_VERSION/binaries/$MAVEN_TAR
 
 # Download Maven
 curl -O $MAVEN_URL
@@ -23,5 +23,11 @@ echo "export M2_HOME=/usr/local/maven" >> ~/.bashrc
 echo "export MAVEN_HOME=/usr/local/maven" >> ~/.bashrc
 echo "export PATH=\${M2_HOME}/bin:\${PATH}" >> ~/.bashrc
 
+# Set up environment variables for zsh
+# echo "export M2_HOME=/usr/local/maven" >> ~/.zshrc
+# echo "export MAVEN_HOME=/usr/local/maven" >> ~/.zshrc
+# echo "export PATH=\${M2_HOME}/bin:\${PATH}" >> ~/.zshrc
+
 # Source the updated .bashrc
 source ~/.bashrc
+# source ~/.zshrc
