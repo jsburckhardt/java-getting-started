@@ -19,3 +19,12 @@ test:
 .PHONY: run
 run:
 	$(MVN) exec:java -Dexec.mainClass="com.example.App"
+
+.PHONY: package
+package: build
+	$(MVN) package
+
+# Create container image
+.PHONY: container
+container: package
+	docker build -t java-app .

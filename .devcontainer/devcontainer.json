@@ -6,9 +6,9 @@
         "java.format.settings.url": ".vscode/java-formatter.xml",
         "java.format.settings.profile": "GoogleStyle"
     },
-    // "mounts": [
-    //     "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
-    // ],
+    "mounts": [
+        "source=${env:HOME}${env:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+    ],
     "forwardPorts": [
         8080
     ],
@@ -16,11 +16,17 @@
         "vscjava.vscode-java-pack",
         "vscjava.vscode-maven",
         "vscjava.vscode-java-debug",
-        "vscjava.vscode-java-test"
+        "vscjava.vscode-java-test",
+        "GitHub.copilot"
     ],
     "features": {
         "ghcr.io/devcontainers/features/java:1": {
             "version": "17"
-        }
-    }
+        },
+        "ghcr.io/jsburckhardt/devcontainer-features/gic:1": {},
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+        "ghcr.io/devcontainers/features/azure-cli:1": {},
+        "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+    },
+    "postCreateCommand": "bash ./.devcontainer/install-maven.sh"
 }

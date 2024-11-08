@@ -11,8 +11,8 @@ This repository contains a sample Java application following best practices. It 
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/githubnext/workspace-blank.git
-   cd workspace-blank
+   git clone https://github.com/jsburckhardt/java-getting-started.git
+   cd java-getting-started
    ```
 
 2. Open the repository in Visual Studio Code:
